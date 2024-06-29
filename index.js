@@ -2,13 +2,21 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import Blog from "./js/blog";
 
 //obtener el nombre de archivo y directorio actual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+/*Server Options*/
 const port = 3000;
 const app = express();
+
+/* Variable */
+var blogs = [
+    new Blog("Primer blog","Roman Rodriguez",new Date(),"Hola","./public/images/receta.jfif")
+];
+
 /*
     middleware
 */
@@ -21,7 +29,7 @@ app.use('/bootstrap',express.static(path.join(__dirname,'node_modules/bootstrap/
     Rutas
 */
 app.get('/',(req,res)=>{
-    res.render("index.ejs");
+    res.render("index.ejs",{blogs});
 });
 app.listen(port, (req, res)=>{
     console.log("Servidor en puerto: ",port);
