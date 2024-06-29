@@ -32,6 +32,9 @@ app.use('/bootstrap',express.static(path.join(__dirname,'node_modules/bootstrap/
 app.get('/',(req,res)=>{
     res.render("index.ejs",{blogs});
 });
+app.get('/createBlog',(req,res)=>{
+    res.render("createBlog.ejs")
+});
 app.listen(port, (req, res)=>{
     console.log("Servidor en puerto: ",port);
 });
