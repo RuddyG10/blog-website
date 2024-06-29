@@ -4,7 +4,7 @@ const port = 3000;
 const app = express();
 
 app.get('/',(req,res)=>{
-    res.send("Hello");
+    res.render("index.ejs");
 });
 app.listen(port, (req, res)=>{
     console.log("Servidor en puerto: ",port);
