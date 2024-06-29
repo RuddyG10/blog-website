@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import Blog from "./js/blog";
+import Blog from "./js/blog.js";
 
 //obtener el nombre de archivo y directorio actual
 const __filename = fileURLToPath(import.meta.url);
@@ -14,7 +14,8 @@ const app = express();
 
 /* Variable */
 var blogs = [
-    new Blog("Primer blog","Roman Rodriguez",new Date(),"Hola","./public/images/receta.jfif")
+    new Blog("Receta de Cocina","Roman Rodriguez",new Date(),"Hola","images/receta.png"),
+    new Blog("Trucos de Videojuegos","Roman Rodriguez",new Date(),"Hola","images/videogame.png")
 ];
 
 /*
