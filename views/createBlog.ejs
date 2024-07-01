@@ -10,7 +10,7 @@
     <%- include("./partials/navBar.ejs") %>
     <div class="container mt-5">
         <h1>Crear Blog</h1>
-        <form action="/create" method="POST">
+        <form action="/createBlog" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label">Title:</label>
                 <input type="text" class="form-control" id="title" name="title" required>
