@@ -1,5 +1,6 @@
 class Blog{
-    constructor(title,author,publishDate,content,imageUrl){
+    constructor(id,title,author,publishDate,content,imageUrl){
+        this.id = id;
         this.title = title;
         this.author=author;
         this.publishDate=publishDate;
